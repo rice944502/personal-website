@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rice Huang</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/radar.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="js/projector.js"></script>
+	<script src="js/canvas-renderer.js"></script>
+
+</head>
+<body>
+<script src="js/background.js"></script>
+	<div class="main">
+		<div class="sample">
+			<div class="myPicture">
+				<img src="css/image/person.jpg">
+			</div>
+			<div class="introMe">
+				<h1>About Me</h1>
+				<p>Hi, I am Rice, 
+				a student who passionate about coding, 
+				I started learning to code in 2010, 
+				and my favorite program language is C++. 
+				I often said "Coding is Live", 
+				and I want to build scientific society. 
+				I believe that, Math and Algorithm can change the world!</p>
+			</div>
+			<div class="project">
+				<h1>Latest Project</h1>	
+				<p>Physical effect by OpenGL</p>
+				<p>Ordering system by PHP</p>
+				<p>Mobile game by Lua</p>
+			</div>
+			<div class="recent">
+				<h1>Recent things</h1>
+				<p>INFAS 2017 Speaker</p>
+				<p>SITCON camp 2017 volunteer</p>
+				<p>Thematic production with university professor</p>
+			</div>
+			
+		</div>
+		<div class="skill">
+		    <h1>資訊技能</h1>
+			<canvas id="skillRadar" width="385px" height="360px"></canvas>
+			<button onclick="chMode(document.getElementById('skillRadar').style.display == 'none');">切換模式</button>
+		</div>
+		<div class="story">
+		    <h1>我的故事</h1>
+			<h3>推開資訊大門</h3>
+			<p>
+			  小學五年級，家中購入第一台電腦，和一般學生一樣，我接觸線上遊戲，放學就是打怪、練功，不久後也厭煩這種重複的動作，不同的是，我選擇的不是刪除遊戲，而是尋找解決「重複動作」這件事的方法，接觸了所謂的外掛，發現很容易造成電腦中毒、密碼被盜...等情況，不甘心就這樣放棄的我，突然想到：「這些東西怎麼來的？我能不能製作看看呢？」於是我接觸撰寫外掛這件事，經過將近一年，終於完成一個可以自己使用技能、自己移動練等的程式，雖然後來知道我寫的只是按鍵精靈，離真正的外掛或程式設計還差的遠，但這就是我接觸資訊的契機。
+			</p>
+			<h3>確立人生志向</h3>
+			<p>國中，進入私立學校，接觸電腦的時間一星期只剩一天半，有一天，誤闖電腦教室，老師發現我的數學成績不錯後問我有沒有興趣寫程式，我提到自己國小的經歷，在和老師聊整整兩小時後，我知道資訊領域的廣闊，也加入程式設計班，利用每天晚自習最後一節課的30分鐘練習程式設計，而老師教的C語言進度不快的關係，我選擇購買一本C++的書籍，不論何時何地，只要有空就開始翻閱，班導師、社會老師開始反彈我寫程式這件事，他們認為我應該專心讀書拼第一志願，而非花費時間在其他事情，這時的我承受各方壓力，一度走不下去，幸好在國二時，我得到全國網際網路程式設計競賽(NPSC)優勝，也是學校第一組獲得優勝的隊伍，這件事讓家裡願讓我繼續學習，學校的施壓我則嘗試使用課業成績抵抗，這換來的是，我國中三年沒有休閒娛樂，有的只是讀書和程式設計，而程式設計給我的快樂感，讓我立定志向要成為一名工程師。</p>
+			<h3>進入迷茫大海</h3>
+			<p>不想再被讀書剝奪寫程式時間的我，決定就讀大安高工資訊科，入學後才發現原來高職還是以讀書為重，和老師溝通後我選擇當選手，舉凡北市軟體競賽、青年程式競賽、全國技能競賽，只要相關的競賽都是我當代表，但很挫折的是，即使我在校內資格賽是以全對之姿奪得第一名，只要正式比賽，我就拿不到理想的成績，老師失望了，我也對自己失望了，同學們冷嘲熱諷，認為我只是請公假在玩，家人依舊給予鼓勵，但我甚麼都聽不下去，因為不論是國小國中的數學競賽，或是國中的程式競賽，獎狀獎盃獎牌都是掛滿家中牆壁，甚至是同樣的競賽內容、多一年的練習，我成績都是更加後退，我懷疑自己是不是不適合寫程式，是不是還是回去讀書比較好，就這樣，我時常吃不好睡不好，直到高三下，我回想起自己這三年的一切。</p>
+			<h3>散佈資訊種子</h3>
+			<p>高一的開始，我參加電腦研究社、祺藝社、魔術社、儀隊4個社團，各方面接觸後，我選擇的還是電腦研究社，在社團，我遇到很多人很好實力也很強的學長，並接觸各種程式語言和資訊領域，不擅長和人接觸的我，在學長帶領下居然變成網界博覽會的領導，也跑去參加社群和Hackathon 甚至是台大的資訊之芽，不論社團或社群，我看到好多同類，他們對於程式的熱忱，以及談論到資訊的眼神，都和我好像，雖然我實力還不足，但大家很願意和我聊，在我有問題時也一個個跳出來搶著告訴我問題點，高二時，甚至自己變成教學長，整個學期都在教導學弟妹程式設計，在自己的理念「要教人，就不能被問倒」下，我的實力進步飛速，也因為持續和社群朋友交流，我學到很多新技術，大家一起陪我哭陪我笑陪我進步，其實寫程式，不就是這樣嗎？為甚麼我要為了競賽的名利而難過？為甚麼我要為了不懂的人的眼光而在意？我不是有一群從甚麼都不會到獨立做Project 的學生嗎？我不是還有社團和社群的學長和同學嗎？我不是在寫程式的過程中獲得大量的快樂嗎？我不是撰寫了很多自己真的想寫的程式了嗎？既然如此，那我為甚麼要迷茫呢？我可是，真正的喜歡程式呢！</p>
+			<h3>邁向光明未來</h3>
+			<p>高三上，一開始我也是拼著統測，卻發現特殊選才的入學管道，在老師們的幫忙及學長們的鼓勵下，我送出花費大量時間完成的備審資料，也模擬許多次的面試，最後，我錄取中山大學及臺灣師範大學的資訊工程系，抉擇許久，因為面試過程中，中山大學教授是不斷和我聊著程式，師範大學是一直講述自己學校很好，基於中山大學教授磁場和我比較和的因素，我決定去中山大學，也從高三上的12/26開始放暑假，而這段多出來的時間，我主要在提升自己的網頁設計能力，學到很多JavaScript 的奇怪語法，也發現自己比起PHP 還是更喜歡Node.js(雖然還不算很熟)，最近，則是和北科大教授合作OpenGL 的project ，也擔任SITCON Camp 的課活組，甚至當上INFAS 的講者(主題為OpenGL)。資訊領域很大、很廣，我還是不太確定自己準確的是要走哪個方向，但我的優勢是比他人還早接觸程式，所以我會不斷接觸各個領域，並在已經會的領域中更加深入，相信有一天，我會知道自己真正想走的是哪一條路，而不管哪一條路，我的目標都一樣—打造一個科技的社會，讓人類生活更加進步。</p>
+		</div>
+		<div class="experience">
+			<h1>經歷</h1>
+			<h3>教學經歷</h3>
+			<p>師大附中、中崙高中、和平高中、大安高中 ─ 網頁設計及版本控制系統</p>
+			<p>中山女中、大安高工 ─ 資訊安全</p>
+			<p>北一女中 ─ Processing 程式設計</p>
+			<p>大安高工 ─ C/C++</p>
+			<p>大安高工 ─ Algorithm and Data Structure</p>
+			<p>成發指導 ─ Python BOT</p>
+			<h3>程式競賽方面</h3>
+			<p>全國網際網路程式競賽優勝</p>
+			<p>奧林匹克數學競賽三等獎</p>
+			<p>北市網界博覽會第二名</p>
+			<p>北市軟體競賽開放組第二名</p>
+			<p>校內軟體競賽第二名</p>
+			<p>數學公開邀請賽第二名</p>
+			<p>腦波創意競賽最佳創意獎</p>
+			<p>北市軟體競賽高工組佳作</p>
+			<p>YTP少年圖靈計畫程式邀請賽</p>
+			<p>青年程式設計競賽佳作</p>
+			<p>成大程式設計競賽入選</p>
+			<p>全國技能競賽網頁設計</p>
+			<h3>相關社群與活動</h3>
+			<p>資訊之芽培訓計畫算法班 優秀結業</p>
+			<p>參加 美國資訊科技產業見學團</p>
+			<p>擔任 INFAS 高中生學術聯展 講者</p>
+			<p>擔任 SITCON 學生計算機年會夏令營 隊輔</p>
+			<p>擔任 SITCON 學生計算機年會夏令營 課活組</p>
+			<p>參加 ioicamp</p>
+			<p>參加 SITCON 學生計算機年會</p>
+			<p>參加 COSCUP 開源人年會</p>
+			<p>參加 HITCON 臺灣駭客年會</p>
+			<p>參加 TDOH 駭客的地下城研討會</p>
+			<p>參加 KSF2E 高雄前端開發者大會</p>
+			<p>參加黑客松台灣第三次主場</p>
+		</div>
+	</div>
+</body>
+</html>
